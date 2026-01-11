@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FashionConnect | Industry & Students</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f9f9f9;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:linear-gradient(90deg,#ff4b7d,#ff9f43);
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Hero */
+.hero{
+    min-height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url("https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:1.2rem;
+}
+
+.hero button{
+    padding:12px 30px;
+    border:none;
+    background:#ff4b7d;
+    color:white;
+    font-size:1rem;
+    border-radius:25px;
+}
+
+/* Login */
+.login-section{
+    padding:60px 20px;
+    background:white;
+    text-align:center;
+}
+
+.login-section form{
+    max-width:350px;
+    margin:auto;
+}
+
+.login-section input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+.login-section button{
+    width:100%;
+    padding:12px;
+    background:#ff9f43;
+    border:none;
+    color:white;
+    border-radius:8px;
+}
+
+/* Sections */
+.fashion-section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* Card */
+.card{
+    height:320px;
+    position:relative;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Overlay */
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:1.2rem;
+    font-weight:bold;
+    opacity:0;
+    transition:0.3s;
+}
+
+.card:hover .overlay{
+    opacity:1;
+}
+
+/* Backgrounds */
+.bg-traditional{
+    background:linear-gradient(135deg,#f6d365,#fda085);
+}
+.bg-western{
+    background:linear-gradient(135deg,#a1c4fd,#c2e9fb);
+}
+.bg-kids{
+    background:linear-gradient(135deg,#fbc2eb,#a6c1ee);
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav ul{
+        justify-content:center;
+        margin-top:10px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+}
+
+@media(max-width:480px){
+    .hero h1{
+        font-size:1.8rem;
+    }
+    .hero p{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>FashionConnect</h2>
+    <ul>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#designs">Designs</a></li>
+        <li><a href="#traditional">Traditional</a></li>
+        <li><a href="#western">Western</a></li>
+        <li><a href="#kids">Kids</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div>
+        <h1>Connecting Fashion Industry with Creative Students</h1>
+        <p>Design • Learn • Showcase • Get Hired</p>
+        <button>Join Now</button>
+    </div>
+</section>
+
+<section id="login" class="login-section">
+    <h2>Student / Industry Login</h2>
+    <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button>Login</button>
+    </form>
+</section>
+
+<section id="designs" class="fashion-section">
+<h2>Fashion Designs</h2>
+<div class="cards">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=800&q=80">
+        <div class="overlay">Runway Designs</div>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=800&q=80">
+        <div class="overlay">Student Sketches</div>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80">
+        <div class="overlay">Industry Trends</div>
+    </div>
+</div>
+</section>
+
+<section id="traditional" class="fashion-section bg-traditional">
+<h2>Traditional Costumes</h2>
+<div class="cards">
+    <div class="card">
+        <img src="https://static.wixstatic.com/media/faf1ba_78c7a05c62a24c61a99d18980455fc89~mv2.jpg/v1/fill/w_526,h_692,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/faf1ba_78c7a05c62a24c61a99d18980455fc89~mv2.jpg">
+        <div class="overlay">Saree Collection</div>
+    </div>
+    <div class="card">
+        <img src="https://www.royalexport.in/product-img/black-georgette-bridal-lehenga-1742830409.jpg">
+        <div class="overlay">Lehenga Styles</div>
+    </div>
+    <div class="card">
+        <img src="https://cdn.shopaccino.com/calmna/categories/dsc8008-copy-129154l-83111853308402_s.jpg?v=651">
+        <div class="overlay">Ethnic Wear</div>
+    </div>
+</div>
+</section>
+
+<section id="western" class="fashion-section bg-western">
+<h2>Western Costumes</h2>
+<div class="cards">
+    <div class="card">
+        <img src="https://www.beyoung.in/api/cache/catalog/products/new_winter_wear_5_10_2022/dark_blue_denim_jacket_for_men_base_02_12_2023_700x933.jpg">
+        <div class="overlay">Denim & Jackets</div>
+    </div>
+    <div class="card">
+        <img src="https://img.kwcdn.com/product/fancy/8361531d-30cb-4445-80e2-9c5c2dae6019.jpg?imageView2/2/w/500/q/60/format/webp">
+        <div class="overlay">Party Dresses</div>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80">
+        <div class="overlay">Casual Wear</div>
+    </div>
+</div>
+</section>
+
+<section id="kids" class="fashion-section bg-kids">
+<h2>Kids Fashion</h2>
+<div class="cards">
+    <div class="card">
+        <img src="https://images.meesho.com/images/products/603050767/h13ip_512.webp?width=512">
+        <div class="overlay">Festive Kidswear</div>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80">
+        <div class="overlay">Casual Outfits</div>
+    </div>
+    <div class="card">
+        <img src="https://liandli.in/cdn/shop/files/product_entry_copy_1_1_bc2e8900-1659-448f-95aa-0733114979fc_800x.jpg?v=1694604434">
+        <div class="overlay">Designer Kids</div>
+    </div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 FashionConnect | Empowering Fashion Students</p>
+</footer>
+
+</body>
+</html>
